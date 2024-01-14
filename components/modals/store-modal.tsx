@@ -50,7 +50,7 @@ export const StoreModal = () => {
 
           if (data.success) {
             toast.success(data.success);
-            router.push(`${data.store.id}/dashboard`);
+            router.push(`/${data.store.id}/dashboard`);
           }
         })
         .catch(() => toast.error("Something went wrong!"))

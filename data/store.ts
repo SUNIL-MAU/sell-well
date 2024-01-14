@@ -8,3 +8,12 @@ export const getStoreByUserId = async (userId: string) => {
     return null;
   }
 };
+
+export const getAllStoreByUserId = async (userId: string) => {
+  try {
+    const store = await db.store.findMany({ where: { userId } });
+    return store;
+  } catch {
+    return null;
+  }
+};
